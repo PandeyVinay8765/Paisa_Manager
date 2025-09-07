@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaisaManager - पैसा मैनेजर</title>
+    
+    <link rel="icon" type="image/svg+xml" href="paisa-logo.png">
+    
+
+    <link rel="stylesheet" href="style.css">
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="notification-container"></div>
+
+    <div class="header">
+        <div class="title-container">
+            <h1 class="app-title">PaisaManager</h1>
+            <h2 class="hindi-title">पैसा मैनेजर</h2>
+        </div>
+        <div class="language-toggle">
+            <button class="toggle-btn" id="languageToggle">🇮🇳 हिंदी</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h4 id="balanceTitle">Your Balance</h4>
+        <h1 id="balance">₹0.00</h1>
+
+        <div class="inc-exp-container">
+            <div>
+                <h4 id="incomeTitle">Income</h4>
+                <p id="money-plus" class="money plus">+₹0.00</p>
+            </div>
+            <div>
+                <h4 id="expenseTitle">Expense</h4>
+                <p id="money-minus" class="money minus">-₹0.00</p>
+            </div>
+        </div>
+
+        <h3 class="section-title" id="historyTitle">History</h3>
+        <ul id="list" class="list"></ul>
+
+        <h3 class="section-title" id="addTransactionTitle">Add new transaction</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="type" id="typeLabel">Type</label>
+                <div class="transaction-type">
+                    <div>
+                        <input type="radio" id="type-income" name="transaction-type" value="income" checked>
+                        <label for="type-income" id="incomeRadioLabel">Income</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="type-expense" name="transaction-type" value="expense">
+                        <label for="type-expense" id="expenseRadioLabel">Expense</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="text" id="descriptionLabel">Description</label>
+                <input type="text" id="text" placeholder="Enter description..." />
+            </div>
+            <div class="form-control">
+                <label for="amount" id="amountLabel">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount..." />
+            </div>
+            <button class="btn" id="addButton">Add transaction</button>
+        </form>
+    </div>
+
+    <div class="credit">
+        <p>Created with <span class="heart">❤️</span> by Vinay Pandey</p>
+        <p>विनय पांडेय द्वारा प्यार से बनाया गया</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
